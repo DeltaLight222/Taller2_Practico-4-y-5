@@ -28,42 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            BGenerar = new Button();
+            TDesde = new TextBox();
+            THasta = new TextBox();
+            Desde = new Label();
+            Hasta = new Label();
+            TBNumeros = new ListBox();
+            label1 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // BGenerar
             // 
-            button1.Location = new Point(183, 56);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            BGenerar.Location = new Point(226, 70);
+            BGenerar.Name = "BGenerar";
+            BGenerar.Size = new Size(103, 23);
+            BGenerar.TabIndex = 0;
+            BGenerar.Text = "Generar función";
+            BGenerar.UseVisualStyleBackColor = true;
+            BGenerar.Click += button1_Click;
             // 
-            // textBox1
+            // TDesde
             // 
-            textBox1.Location = new Point(72, 71);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            TDesde.Location = new Point(102, 70);
+            TDesde.Name = "TDesde";
+            TDesde.Size = new Size(100, 23);
+            TDesde.TabIndex = 1;
             // 
-            // textBox2
+            // THasta
             // 
-            textBox2.Location = new Point(72, 133);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 2;
+            THasta.Location = new Point(102, 130);
+            THasta.Name = "THasta";
+            THasta.Size = new Size(100, 23);
+            THasta.TabIndex = 2;
+            // 
+            // Desde
+            // 
+            Desde.AutoSize = true;
+            Desde.Location = new Point(31, 74);
+            Desde.Name = "Desde";
+            Desde.Size = new Size(39, 15);
+            Desde.TabIndex = 3;
+            Desde.Text = "Desde";
+            // 
+            // Hasta
+            // 
+            Hasta.AutoSize = true;
+            Hasta.Location = new Point(28, 133);
+            Hasta.Name = "Hasta";
+            Hasta.Size = new Size(37, 15);
+            Hasta.TabIndex = 4;
+            Hasta.Text = "Hasta";
+            // 
+            // TBNumeros
+            // 
+            TBNumeros.FormattingEnabled = true;
+            TBNumeros.ItemHeight = 15;
+            TBNumeros.Location = new Point(397, 74);
+            TBNumeros.Name = "TBNumeros";
+            TBNumeros.Size = new Size(321, 304);
+            TBNumeros.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(532, 56);
+            label1.Name = "label1";
+            label1.Size = new Size(99, 15);
+            label1.TabIndex = 6;
+            label1.Text = "Lista de Numeros";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(label1);
+            Controls.Add(TBNumeros);
+            Controls.Add(Hasta);
+            Controls.Add(Desde);
+            Controls.Add(THasta);
+            Controls.Add(TDesde);
+            Controls.Add(BGenerar);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -72,8 +117,12 @@
 
         #endregion
 
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button BGenerar;
+        private TextBox TDesde;
+        private TextBox THasta;
+        private Label Desde;
+        private Label Hasta;
+        private ListBox TBNumeros;
+        private Label label1;
     }
 }
